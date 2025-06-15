@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cskea2cr5afpe"]
+
+[ext_resource type="PackedScene" uid="uid://c76ji10qkwv5x" path="res://Assets/3D/HelloWorld.glb" id="1_7h45n"]
+[ext_resource type="Script" uid="uid://dcaeihfd6hf55" path="res://Scripts/CameraMovement.cs" id="2_krihi"]
+
+[sub_resource type="Environment" id="Environment_krihi"]
+background_mode = 1
+background_color = Color(0.76662, 0.76662, 0.76662, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_krihi")
+
+[node name="HelloWorld" parent="." instance=ExtResource("1_7h45n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.53012, 0, 0.274978)
+
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("Target")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.271187, 2.27462)
+script = ExtResource("2_krihi")
+Target = NodePath("../HelloWorld")
