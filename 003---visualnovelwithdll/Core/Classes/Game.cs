@@ -1,6 +1,6 @@
-﻿
+﻿using Data;
+
 namespace Core;
-using Data;
 
 /// <summary>
 /// Handles the game workflow
