@@ -10,7 +10,7 @@ public static class Game
     /// <summary>
     /// List of dialogs
     /// </summary>
-    static List<Dialog> dialogs = Data.Dialogs;
+    static List<Dialog> dialogs = Data.Data.Dialogs;
 
     /// <summary>
     /// Dialog index
