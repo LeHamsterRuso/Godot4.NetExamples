@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://wtfqx7mu7ec6"]
+
+[ext_resource type="Script" uid="uid://rexbrtrrwdcs" path="res://Scripts/Dialogs.cs" id="1_potcw"]
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("Background", "DialogCharacter", "DialogText")]
+script = ExtResource("1_potcw")
+Background = NodePath("CanvasLayer/TextureRect")
+DialogCharacter = NodePath("CanvasLayer/ColorRectName/LabelName")
+DialogText = NodePath("CanvasLayer/ColorRectText/LabelText")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+
+[node name="ColorRectName" type="ColorRect" parent="CanvasLayer"]
+offset_left = -1.0
+offset_top = 475.0
+offset_right = 199.0
+offset_bottom = 530.0
+color = Color(0, 0, 0.74902, 0.345098)
+
+[node name="LabelName" type="Label" parent="CanvasLayer/ColorRectName"]
+offset_right = 200.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 24
+text = "NPC"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRectText" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -116.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(2.88785e-06, 0, 0.748958, 0.345098)
+
+[node name="LabelText" type="Label" parent="CanvasLayer/ColorRectText"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -116.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Hello ligthness my old friend"
